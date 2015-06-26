@@ -26,12 +26,12 @@ These steps should be automated by a script soon!
 ```
 CREATE DATABASE band_sched;
 CREATE USER "foo" identified by "1337";
-GRANT ALL on band-sched.* to "foo"@"localhost" identified by "1337";
+GRANT ALL on band_sched.* to "foo"@"localhost" identified by "1337";
 
 ```
 Next, import the schema, from the sched.sql
 ```
-mysql -u foo -p band_sched < examples/sched.sql
+mysql -u foo -p band_sched < sched.sql
 ```
 Create an initial user:
 ```

@@ -8,7 +8,7 @@ class db{
 	}
 
 	private function getDBConfig(){
-		$this->config = parse_ini_file('/var/db/fcc_worship.ini', false);
+		$this->config = parse_ini_file('/var/db/band_sched.ini', false);
 	}
 
 	private function connect(){
@@ -30,7 +30,7 @@ class db{
 			return 'error';
 		}
 		return $result;
-		
+
 	}
 
 	public function remove($table,$condition){
@@ -56,7 +56,7 @@ class db{
 		if ($result != 'error'){
 			$row = $result->fetch_array(MYSQLI_ASSOC);
 			$result->free();
-			return $row;	
+			return $row;
 		}
 	}
 
@@ -65,7 +65,7 @@ class db{
                 if ($result != 'error'){
 			while ($row = $result->fetch_array(MYSQLI_ASSOC)){
 				$rows[] = $row;
-			} 
+			}
                         $result->free();
                         return $rows;
                 }
